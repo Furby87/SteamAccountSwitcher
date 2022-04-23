@@ -1,0 +1,40 @@
+﻿<Window x:Class="SteamAccountSwitcher.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SteamAccountSwitcher"
+        xmlns:p="clr-namespace:SteamAccountSwitcher.Properties"
+        xmlns:av="clr-namespace:WpfAboutView;assembly=WpfAboutView"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Window.Title>
+        <MultiBinding StringFormat="{}About {0}">
+            <Binding Source="{x:Static local:AssemblyInfo.Title}" />
+        </MultiBinding>
+    </Window.Title>
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="12" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="2"
+                Content="_OK"
+                Click="btnOK_OnClick"
+                IsDefault="True"
+                IsCancel="True"
+                Width="75"
+                Height="23" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <DockPanel HorizontalAlignment="Left" Height="131.333" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="446">
+            <DockPanel Height="131.333" LastChildFill="False" VerticalAlignment="Top" Width="131.333">
+                <Image Margin="0,0.027,0,0" Source="favicon.ico" Stretch="Fill" Width="131.306" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </DockPanel>
+            <av:AboutView Height="131" VerticalAlignment="Top" Width="273"/>
+        </DockPanel>
+        <TextBox HorizontalAlignment="Center" Height="20.389" TextWrapping="Wrap" Text="https://www.twitch.tv/furby1987" VerticalAlignment="Bottom" Width="466" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Height="68.278" Margin="10,146.333,0,0" TextWrapping="Wrap" Width="446" VerticalAlignment="Top" TextAlignment="Center"><Run Text="Developed by:&#x9;"/><Run FontWeight="Bold" Text="Furby1987"/><LineBreak/><Run FontWeight="Bold"/></TextBlock>
+    </Grid>
+</Window>
