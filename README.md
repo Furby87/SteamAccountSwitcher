@@ -14,6 +14,7 @@ Quickly switch between Steam accounts.
 
 If u wanna Support me, just leave a follow at: https://www.twitch.tv/Furby1987
 
+[![Discord Presence](https://lanyard.cnrad.dev/api/153205233500028929)](https://discord.com/users/153205233500028929)
 
 ## License
 [MIT License](LICENSE.md)
